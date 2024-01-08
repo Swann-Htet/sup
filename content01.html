@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="back">
+    <a href="index.html">
+      <img src="asset/images/back.png" alt="" height="30px">
+    </a>
+  </div>
+  <div class="nav">
+    <div class="container-nav">
+      <div class="card-container">
+        <a href="content03.html">
+          <div class="card">
+            <div class="img">
+              <img src="asset/images/images.gif" alt="">
+            </div>
+            <div class="title">IMAGES</div>
+          </div>
+        </a>
+  
+        <a href="content06.html">
+          <div class="card">
+            <div class="img">
+              <img src="asset/images/videos.gif" alt="">
+            </div>
+            <div class="title">VIDEO</div>
+          </div>
+        </a>
+  
+        <a href="content02.html">
+          <div class="card">
+            <div class="img">
+              <img src="asset/images/songs.gif" alt="">
+            </div>
+            <div class="title">SONG</div>
+          </div>
+        </a>
+  
+        <a href="content04.html">
+          <div class="card">
+            <div class="img">
+              <img src="asset/images/letter.gif" alt="">
+            </div>
+            <div class="title">LETTER</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+    <canvas></canvas>
+  
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+    
+    <script src="JS/script.js"></script>
+
+</body>
+</html>
